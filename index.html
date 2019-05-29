@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Switching Login and Register Page</title>
+    <style>
+      #register {
+        display: none;
+      }
+
+      #login {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="login">
+      <h1>Login</h1>
+      <p>This is Login Page</p>
+    </div>
+
+    <div id="register">
+      <h1>Register</h1>
+      <p>This is Register Page</p>
+    </div>
+    <button id="change">Switch</button>
+    
+    <script>
+      const changeData = document.querySelector('#change');
+      changeData.addEventListener('click', e => {
+        e.preventDefault();
+        const reg = document.querySelector('#register');
+        reg.style.display == "none" ? reg.style.display="block" : reg.style.display = "none";
+        const log = document.querySelector('#login');
+        log.style.display == "block" ? log.style.display ="none" : log.style.display ="block";
+      });
+    </script>
+  </body>
+</html>
